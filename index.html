@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    
+    <!-- Css Principal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Teste</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 card" id="menuvertical">
+          <!-- Inicio Logo -->
+          <img class="my-3 ml-3" src="img/brand.png" width="150">
+          <!-- Fim Logo-->
+
+          <!-- Inicio Seleção-->
+          <div class="dropdown">
+            <button class="btn btn-light border dropdown-toggle ml-1 pr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="bi-house-door"></i> Área do Cliente
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"><i class="bi-basket mx-2"></i>Compras</a>
+              <a class="dropdown-item" href="#"><i class="bi-cart mx-2"></i>Carrinho</a>
+            </div>
+          </div>
+          <!-- Fim Seleção-->
+
+          <!-- Inicio Navbar Vertical-->
+          <h6 class="text-uppercase mt-5 ml-3">apps</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active text-muted" href="#">Email</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">Conversar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">Todo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-muted" href="#">Calendário</a>
+            </li>
+          </ul>
+          <!-- Fim Navbar Vertical-->
+        </div>
+        <div class="col-10">
+            <!-- Início Navbar Horizontal -->
+            <div class="navbar bg-light mt-4" id="navhorizontal">
+                <div class="nav-link float-left" id="itemnav1">
+                  <button class="btn btn-light bi-check2-square text-muted"></button>
+                  <button class="btn btn-light bi-chat-left text-muted"></button>
+                  <button class="btn btn-light bi-envelope text-muted"></button>
+                  <button class="btn btn-light bi-calendar4 text-muted"></button>
+                  <button class="btn btn-light bi-star text-muted"></button>
+                </div>
+                <div class="navbar float-right" id="itemnav2">
+                  <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-light bi-bell notification pr-2">
+                      <span class="badge badge-warning rounded-circle">1</span> 
+                    </button>
+                    <button class="btn btn-light bi-search text-muted mr-2 ml-2"></button>
+                    <div class="d-flex flex-column mr-3">
+                      <div class="d-flex justify-content-center">Maria Elza</div>
+                      <div class="d-flex justify-content-center"><small>Cliente Vip</small></div>
+                    </div>
+                    <img src="img/person-circle.svg" alt="" width="30" height="30" class="rounded-circle mt-2">
+                  </div>
+                </div>   
+            </div>
+            <!-- Fim Navbar Horizontal -->
+            <!-- Início Breadcrumb  -->
+            <div class="row">
+              <div class="col-12">
+                <div class="linhabreadcrumb mt-2">
+                  <div class="float-left">
+                    <nav id="divi_breadcrumb">
+                      <ol class="breadcrumb" id="fundo_bread">
+                        <li class="breadcrumb-custom"><a href="#" class="text-muted">Resultados</a></li>
+                        <li class="breadcrumb-custom1"><a href="#" class="text-muted"><i class="bi-house-door mx-2"></i></a></li>
+                        <li class="breadcrumb-custom2 active" aria-current="page">Cursos</li>
+                      </ol>
+                    </nav>
+                  </div>
+                  <div class="float-right"> 
+                    <div class="dropdown">
+                      <button type="button" class="btn btn-dark mt-2 engrenagem" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi-gear d-flex justify-content-center"></i>
+                      </button> 
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" id="cor_claro">Tema Claro</a>
+                        <a class="dropdown-item" id="cor_escuro">Tema Escuro</a>
+                      </div>
+                    </div>
+                      
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Fim Breadcrumb  -->
+            <!-- Inicio nova linha -->
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="d-flex justify-content-between align-items-center">Filtros</div>
+                <div class="d-flex justify-content-between align-items-center" id="texto_resultados">200 resultados encontrados</div>
+                <div class="d-flex justify-content-between">
+                  <div class="dropdown mr-2">
+                    <button class="btn btn-light border dropdown-toggle ml-1 pr-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Listagem
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Grid</a>
+                      <a class="dropdown-item" href="#">Lista</a>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-light mr-2"><i class="bi-grid d-flex justify-content-center"></i></button>
+                  <button type="button" class="btn btn-light"><i class="bi-list d-flex justify-content-center"></i></button>
+                </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fim nova linha -->
+            <!-- Inicio Duas seções -->
+            <div class="row">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="container card" id="coluna_filtro">
+                      <div class="check_precos">
+                        <h6 class="font-weight-bold my-4">Preços</h6>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1" checked>
+                        <label class="form-check-label text_radio" for="exampleRadios1">
+                          R$10
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                        <label class="form-check-label text_radio" for="exampleRadios2">
+                          R$10-$100
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                        <label class="form-check-label text_radio" for="exampleRadios2">
+                          R$100-$500
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                        <label class="form-check-label text_radio" for="exampleRadios2">
+                          R$500
+                        </label>
+                      </div>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+                        <label class="form-check-label text_radio" for="exampleRadios2">
+                          Todos
+                        </label>
+                      </div>
+                      </div>
+                      <hr>
+                      <div class="range_valores my-3">
+                        <h6 class="font-weight-bold my-3">Valores</h6>
+                        <label for="customRange2" id="valor" class="text_range">1.99 - 4098</label>
+                        <input type="range" class="custom-range" min="1.99" max="4098" value="0" id="customRange2">
+                      </div>
+                      <hr>
+                      <div class="check_categorias">
+                        <h6 class="font-weight-bold my-3">Categorias</h6>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck1">
+                          <label class="custom-control-label text_categorias" for="customCheck1">Érico Rocha</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck2">
+                          <label class="custom-control-label text_categorias" for="customCheck2">Desafio 6 em 7</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck3">
+                          <label class="custom-control-label text_categorias" for="customCheck3">Fórmula de Lançamento</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck4">
+                          <label class="custom-control-label text_categorias" for="customCheck4">KlickPages</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="customCheck5">
+                          <label class="custom-control-label text_categorias mb-3" for="customCheck5">Aúdios</label>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="avaliacao">
+                        <h6 class="font-weight-bold my-4">Avaliação</h6>
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="float left">
+                              <i class="bi-star mr-2" id="star_first1"></i>
+                              <i class="bi-star mr-2" id="star_first2"></i>
+                              <i class="bi-star mr-2" id="star_first3"></i>
+                              <i class="bi-star mr-2" id="star_first4"></i>
+                              <i class="bi-star mr-2" id="star_first5"></i>
+                              <p class="text_avaliacao float-right">8500</p>
+                            </div> 
+                          </div>
+                          <div class="col-12">
+                            <div class="float left">
+                              <i class="bi-star mr-2" id="star_second1"></i>
+                              <i class="bi-star mr-2" id="star_second2"></i>
+                              <i class="bi-star mr-2" id="star_second3"></i>
+                              <i class="bi-star mr-2" id="star_second4"></i>
+                              <i class="bi-star mr-2" id="star_second5"></i>
+                              <p class="text_avaliacao float-right">3250</p>
+                            </div> 
+                          </div>
+                          <div class="col-12">
+                            <div class="float left">
+                              <i class="bi-star mr-2" id="star_third1"></i>
+                              <i class="bi-star mr-2" id="star_third2"></i>
+                              <i class="bi-star mr-2" id="star_third3"></i>
+                              <i class="bi-star mr-2" id="star_third4"></i>
+                              <i class="bi-star mr-2" id="star_third5"></i>
+                              <p class="text_avaliacao float-right">1120</p>
+                            </div> 
+                          </div>
+                        </div>
+                      </div>
+                      <button type="button" class="btn btn-secondary my-5 text-uppercase">Limpar Filtros</button>
+                    </div>
+                  </div><!-- col-3 -->
+                  <div class="col-9">
+                    <!-- Inicio Busca -->
+                    <form class="input-group mb-2" id="input_busca">
+                      <input type="text"  class="form-control" id="busca_botao" placeholder="Buscar">
+                      <div class="input-group-append">
+                        <button type="reset" class="btn btn-light" ><i class="bi-star mr-1"></i></button>
+                      </div>
+                    </form>
+                    <!-- Fim Busca -->
+                    <div class="row">
+                      <div class="col-12">
+
+                          <!-- Inicio Cartão 1-->
+                          <div class="card mb-2" id="cartao">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="img/beats-headphones.jpg" class="img-fluid pt-3 pb-3 ml-3">
+                              </div>
+                              <div class="col-md-6">
+                                <h6 class="card-title mt-4 text-uppercase ">Fórmula de Lançamento</h6>
+                                <p class="textsub">Por Érico Rocha</p>
+                                <p id="lorem_texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                  a type specimen book.</p>
+                              </div>
+                              <div class="col-md-3 linha_lado">
+                                <div class="row">
+                                  <div class="col-12 d-flex flex-column">
+                                    <button type="button" class="btn btn-dark d-flex align-self-end mt-3 mb-3 mr-3"><i class="bi-star mr-1"></i>3.4</button>
+                                    <p class=" d-flex justify-content-center">R$ 2500</p>
+                                    <button type="button" class="btn btn-secondary text-uppercase d-flex align-self-center mb-2 botao_card justify-content-center" ><i class="bi-heart mr-1"></i>amei</button>
+                                    <button type="button" class="btn btn-dark text-uppercase d-flex align-self-center botao_card justify-content-center"><i class="bi-bag-dash mr-1"></i>comprar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Fim Cartão 1 -->
+
+                          <!-- Inicio Cartão 2 -->
+                          <div class="card mb-2" id="cartao">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="img/beats-headphones.jpg" class="img-fluid pt-3 pb-3 ml-3">
+                              </div>
+                              <div class="col-md-6">
+                                <h6 class="card-title mt-4 text-uppercase ">Fórmula de Lançamento</h6>
+                                <p class="textsub">Por Érico Rocha</p>
+                                <p id="lorem_texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                  a type specimen book.</p>
+                              </div>
+                              <div class="col-md-3 linha_lado">
+                                <div class="row">
+                                  <div class="col-12 d-flex flex-column">
+                                    <button type="button" class="btn btn-dark d-flex align-self-end mt-3 mb-3 mr-3"><i class="bi-star mr-1"></i>3.4</button>
+                                    <p class=" d-flex justify-content-center">R$ 2500</p>
+                                    <button type="button" class="btn btn-secondary text-uppercase d-flex align-self-center mb-2 botao_card justify-content-center" ><i class="bi-heart mr-1"></i>amei</button>
+                                    <button type="button" class="btn btn-dark text-uppercase d-flex align-self-center botao_card justify-content-center"><i class="bi-bag-dash mr-1"></i>comprar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Fim Cartão 2 -->
+
+                          <!-- Inicio Cartão 3 -->
+                          <div class="card mb-2" id="cartao">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="img/beats-headphones.jpg" class="img-fluid pt-3 pb-3 ml-3">
+                              </div>
+                              <div class="col-md-6">
+                                <h6 class="card-title mt-4 text-uppercase ">Fórmula de Lançamento</h6>
+                                <p class="textsub">Por Érico Rocha</p>
+                                <p id="lorem_texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                  a type specimen book.</p>
+                              </div>
+                              <div class="col-md-3 linha_lado">
+                                <div class="row">
+                                  <div class="col-12 d-flex flex-column">
+                                    <button type="button" class="btn btn-dark d-flex align-self-end mt-3 mb-3 mr-3"><i class="bi-star mr-1"></i>3.4</button>
+                                    <p class=" d-flex justify-content-center">R$ 2500</p>
+                                    <button type="button" class="btn btn-secondary text-uppercase d-flex align-self-center mb-2 botao_card justify-content-center" ><i class="bi-heart mr-1"></i>amei</button>
+                                    <button type="button" class="btn btn-dark text-uppercase d-flex align-self-center botao_card justify-content-center"><i class="bi-bag-dash mr-1"></i>comprar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Fim Cartão 3 -->
+                          <!-- Inicio Cartão 4 -->
+                          <div class="card mb-2" id="cartao">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="img/beats-headphones.jpg" class="img-fluid pt-3 pb-3 ml-3">
+                              </div>
+                              <div class="col-md-6">
+                                <h6 class="card-title mt-4 text-uppercase ">Fórmula de Lançamento</h6>
+                                <p class="textsub">Por Érico Rocha</p>
+                                <p id="lorem_texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                  a type specimen book.</p>
+                              </div>
+                              <div class="col-md-3 linha_lado">
+                                <div class="row">
+                                  <div class="col-12 d-flex flex-column">
+                                    <button type="button" class="btn btn-dark d-flex align-self-end mt-3 mb-3 mr-3"><i class="bi-star mr-1"></i>3.4</button>
+                                    <p class=" d-flex justify-content-center">R$ 2500</p>
+                                    <button type="button" class="btn btn-secondary text-uppercase d-flex align-self-center mb-2 botao_card justify-content-center" ><i class="bi-heart mr-1"></i>amei</button>
+                                    <button type="button" class="btn btn-dark text-uppercase d-flex align-self-center botao_card justify-content-center"><i class="bi-bag-dash mr-1"></i>comprar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Fim Cartão 4 -->
+                          
+                          <!-- Inicio Cartão 5 -->
+                          <div class="card" id="cartao">
+                            <div class="row">
+                              <div class="col-md-3">
+                                <img src="img/beats-headphones.jpg" class="img-fluid pt-3 pb-3 ml-3">
+                              </div>
+                              <div class="col-md-6">
+                                <h6 class="card-title mt-4 text-uppercase ">Fórmula de Lançamento</h6>
+                                <p class="textsub">Por Érico Rocha</p>
+                                <p id="lorem_texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                  a type specimen book.</p>
+                              </div>
+                              <div class="col-md-3 linha_lado">
+                                <div class="row">
+                                  <div class="col-12 d-flex flex-column">
+                                    <button type="button" class="btn btn-dark d-flex align-self-end mt-3 mb-3 mr-3"><i class="bi-star mr-1"></i>3.4</button>
+                                    <p class=" d-flex justify-content-center">R$ 2500</p>
+                                    <button type="button" class="btn btn-secondary text-uppercase d-flex align-self-center mb-2 botao_card justify-content-center" ><i class="bi-heart mr-1"></i>amei</button>
+                                    <button type="button" class="btn btn-dark text-uppercase d-flex align-self-center botao_card justify-content-center"><i class="bi-bag-dash mr-1"></i>comprar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Fim Cartão 5-->
+                    </div><!-- col-12 -->
+                    <div class="col-12">
+                      <div class="row">
+                        <nav class="d-flex flex-row my-5">
+                          <li class="page_seta"><a class="seta d-flex justify-content-center bi-chevron-left mr-3" href="#"></a></li>
+                          <ul class="pagination pagination-gap">
+                            <li><a class="page-link" href="#">1</a></li>
+                            <li><a class="page-link" href="#">2</a></li>
+                            <li><a class="page-link" href="#">3</a></li>
+                            <li><a class="page-link" href="#">4</a></li>
+                            <li><a class="page-link" href="#">5</a></li>
+                            <li><a class="page-link" href="#">6</a></li>
+                            <li><a class="page-link" href="#">7</a></li>
+                            <li><a class="page-link" href="#">8</a></li>
+                            <li><a class="page-link" href="#">9</a></li>
+                            <li><a class="page-link" href="#">10</a></li>
+                          </ul>
+                          <li class="page_seta"><a class="seta d-flex justify-content-center bi-chevron-right ml-3" href="#"></a></li>
+                        </nav>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Fim  Duas seções -->
+      </div>
+    </div>
+    <!-- JavaScript (Opcional) -->
+    <script src="main.js"></script>
+  </body>
+</html>
